@@ -1,4 +1,4 @@
-# Jithesh Reddy — Dubbing & Voiceover Artist Portfolio
+# Y. Jitesh Reddy — Dubbing & Voiceover Artist Portfolio
 
 An elegant, attention-grabbing, organic pastel portfolio website designed to showcase your profound passion for dubbing, character voice acting, and vocal storytelling.
 

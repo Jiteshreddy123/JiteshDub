@@ -1,5 +1,5 @@
 /**
- * Jithesh Reddy — Dubbing & Voiceover Portfolio
+ * Y. Jitesh Reddy — Dubbing & Voiceover Portfolio
  * Custom Interactive Audio Suite & Organic Visualizer
  */
 
