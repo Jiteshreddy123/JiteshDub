@@ -638,90 +638,272 @@
     </div>
   </section>
 
-  <!-- NAVARASA: THE NINE EMOTIONAL EXPRESSIONS PALETTE -->
+  <!-- EMOTIONAL VOCAL RANGE & VOICE DEMOS SECTION -->
   <section id="navarasa" class="navarasa-section">
     <div class="container">
       
       <div class="section-header text-center">
-        <div class="section-tag-pill">Vocal Range & Palette</div>
-        <h2 class="section-title">The Navarasa Vocal Spectrum</h2>
+        <div class="section-tag-pill">
+          <span class="tag-sparkle">✦</span> Voice Acting Demos
+        </div>
+        <h2 class="section-title">The Emotional Range Spectrum</h2>
         <p class="section-subtitle">
-          Inspired by India’s classical theory of nine aesthetic emotions, each character requires a distinctive emotional frequency and cadence.
+          Authentic vocal characterizations across diverse emotional states. Click play on any emotion below to listen to my voice acting samples recorded in studio.
         </p>
       </div>
 
       <div class="rasa-grid">
         
-        <div class="rasa-card" data-rasa="shringara">
+        <!-- 1. Happiness -->
+        <div class="rasa-card" data-rasa="happiness">
           <div class="rasa-header">
-            <span class="rasa-sanskrit">शृङ्गार • Shringara</span>
-            <span class="rasa-tag">Love & Romance</span>
+            <span class="rasa-sanskrit">Happiness</span>
+            <span class="rasa-tag">Joy & Triumph</span>
           </div>
-          <p class="rasa-voice-desc">Warm, velvety, intimate proximity, gentle breath release, inviting cadence.</p>
+          <div class="emotion-quote">
+            <p>“Hey! You won't believe what just happened! I got selected for the internship I've been dreaming about! All those late nights finally paid off...”</p>
+          </div>
+          <p class="rasa-voice-desc">Bright, smile-filled resonance, buoyant breath dynamics, and ecstatic triumphant laughter.</p>
+          <div class="mini-player" data-audio-id="audioHappiness">
+            <audio id="audioHappiness" preload="metadata" class="mini-audio">
+              <source src="assets/audio/emotions/happiness.m4a" type="audio/mp4">
+              <source src="assets/audio/emotions/happiness.m4a" type="audio/x-m4a">
+            </audio>
+            <button class="btn-mini-play" title="Play Happiness clip" aria-label="Play Happiness clip">
+              <svg class="mini-icon-play" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <polygon points="6 4 20 12 6 20 6 4"/>
+              </svg>
+              <svg class="mini-icon-pause hidden" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <rect x="6" y="4" width="4" height="16" rx="1"/>
+                <rect x="14" y="4" width="4" height="16" rx="1"/>
+              </svg>
+            </button>
+            <div class="mini-scrubber-wrap">
+              <div class="mini-scrubber" title="Click to seek">
+                <div class="mini-progress"></div>
+              </div>
+              <div class="mini-time-row">
+                <span class="mini-curr">0:00</span>
+                <span class="mini-dur">0:14</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="rasa-card" data-rasa="hasya">
+        <!-- 2. Sadness -->
+        <div class="rasa-card" data-rasa="sadness">
           <div class="rasa-header">
-            <span class="rasa-sanskrit">हास्य • Hasya</span>
-            <span class="rasa-tag">Joy & Humor</span>
+            <span class="rasa-sanskrit">Sadness</span>
+            <span class="rasa-tag">Grief & Nostalgia</span>
           </div>
-          <p class="rasa-voice-desc">Bouncy pitch inflection, playful smiles in the tone, quick comedic timing.</p>
+          <div class="emotion-quote">
+            <p>“I know we always said we would stay in touch, but somehow saying goodbye feels harder than I expected. This place holds so many memories of us...”</p>
+          </div>
+          <p class="rasa-voice-desc">Subtle vocal tremor, subdued pitch, poignant pauses, and tender nostalgic empathy.</p>
+          <div class="mini-player" data-audio-id="audioSadness">
+            <audio id="audioSadness" preload="metadata" class="mini-audio">
+              <source src="assets/audio/emotions/sadness.m4a" type="audio/mp4">
+              <source src="assets/audio/emotions/sadness.m4a" type="audio/x-m4a">
+            </audio>
+            <button class="btn-mini-play" title="Play Sadness clip" aria-label="Play Sadness clip">
+              <svg class="mini-icon-play" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <polygon points="6 4 20 12 6 20 6 4"/>
+              </svg>
+              <svg class="mini-icon-pause hidden" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <rect x="6" y="4" width="4" height="16" rx="1"/>
+                <rect x="14" y="4" width="4" height="16" rx="1"/>
+              </svg>
+            </button>
+            <div class="mini-scrubber-wrap">
+              <div class="mini-scrubber" title="Click to seek">
+                <div class="mini-progress"></div>
+              </div>
+              <div class="mini-time-row">
+                <span class="mini-curr">0:00</span>
+                <span class="mini-dur">0:25</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="rasa-card" data-rasa="karuna">
+        <!-- 3. Anger -->
+        <div class="rasa-card" data-rasa="anger">
           <div class="rasa-header">
-            <span class="rasa-sanskrit">करुण • Karuna</span>
-            <span class="rasa-tag">Compassion & Sorrow</span>
+            <span class="rasa-sanskrit">Anger</span>
+            <span class="rasa-tag">Fury & Indignation</span>
           </div>
-          <p class="rasa-voice-desc">Subtle vocal tremor, subdued pitch, poignant pauses, tender empathy.</p>
+          <div class="emotion-quote">
+            <p>“Are you seriously telling me that you did all the work? I stayed for 3 nights finishing that project while you barely contributed anything, and now you're standing there taking all the credit?!”</p>
+          </div>
+          <p class="rasa-voice-desc">Piercing vocal attacks, biting consonants, dynamic explosive chest resonance, and righteous indignation.</p>
+          <div class="mini-player" data-audio-id="audioAnger">
+            <audio id="audioAnger" preload="metadata" class="mini-audio">
+              <source src="assets/audio/emotions/anger.m4a" type="audio/mp4">
+              <source src="assets/audio/emotions/anger.m4a" type="audio/x-m4a">
+            </audio>
+            <button class="btn-mini-play" title="Play Anger clip" aria-label="Play Anger clip">
+              <svg class="mini-icon-play" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <polygon points="6 4 20 12 6 20 6 4"/>
+              </svg>
+              <svg class="mini-icon-pause hidden" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <rect x="6" y="4" width="4" height="16" rx="1"/>
+                <rect x="14" y="4" width="4" height="16" rx="1"/>
+              </svg>
+            </button>
+            <div class="mini-scrubber-wrap">
+              <div class="mini-scrubber" title="Click to seek">
+                <div class="mini-progress"></div>
+              </div>
+              <div class="mini-time-row">
+                <span class="mini-curr">0:00</span>
+                <span class="mini-dur">0:27</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="rasa-card" data-rasa="raudra">
+        <!-- 4. Fear -->
+        <div class="rasa-card" data-rasa="fear">
           <div class="rasa-header">
-            <span class="rasa-sanskrit">रौद्र • Raudra</span>
-            <span class="rasa-tag">Fury & Intensity</span>
+            <span class="rasa-sanskrit">Fear</span>
+            <span class="rasa-tag">Suspense & Paranoia</span>
           </div>
-          <p class="rasa-voice-desc">Grounded chest resonance, biting consonants, dynamic explosive power.</p>
+          <div class="emotion-quote">
+            <p>“Hello? Is anybody there? I thought I heard someone walking behind me... Whenever I turn around, nobody is there. My phone battery is almost dead...”</p>
+          </div>
+          <p class="rasa-voice-desc">Rapid irregular breath-led whisper, constricted throat tension, and eerie vulnerability.</p>
+          <div class="mini-player" data-audio-id="audioFear">
+            <audio id="audioFear" preload="metadata" class="mini-audio">
+              <source src="assets/audio/emotions/fear.m4a" type="audio/mp4">
+              <source src="assets/audio/emotions/fear.m4a" type="audio/x-m4a">
+            </audio>
+            <button class="btn-mini-play" title="Play Fear clip" aria-label="Play Fear clip">
+              <svg class="mini-icon-play" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <polygon points="6 4 20 12 6 20 6 4"/>
+              </svg>
+              <svg class="mini-icon-pause hidden" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <rect x="6" y="4" width="4" height="16" rx="1"/>
+                <rect x="14" y="4" width="4" height="16" rx="1"/>
+              </svg>
+            </button>
+            <div class="mini-scrubber-wrap">
+              <div class="mini-scrubber" title="Click to seek">
+                <div class="mini-progress"></div>
+              </div>
+              <div class="mini-time-row">
+                <span class="mini-curr">0:00</span>
+                <span class="mini-dur">0:33</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="rasa-card" data-rasa="vira">
+        <!-- 5. Disgust -->
+        <div class="rasa-card" data-rasa="disgust">
           <div class="rasa-header">
-            <span class="rasa-sanskrit">वीर • Vira</span>
-            <span class="rasa-tag">Heroism & Valour</span>
+            <span class="rasa-sanskrit">Disgust</span>
+            <span class="rasa-tag">Aversion & Contempt</span>
           </div>
-          <p class="rasa-voice-desc">Commanding clarity, upright posture projection, inspiring confidence.</p>
+          <div class="emotion-quote">
+            <p>“Excuse me, what exactly is this? I ordered fresh food, not something that smells like it's been sitting here for days! Just look at this... This is unacceptable.”</p>
+          </div>
+          <p class="rasa-voice-desc">Nasal compression, visceral curled-lip timbre, and sharp, biting dismissal.</p>
+          <div class="mini-player" data-audio-id="audioDisgust">
+            <audio id="audioDisgust" preload="metadata" class="mini-audio">
+              <source src="assets/audio/emotions/disgust.m4a" type="audio/mp4">
+              <source src="assets/audio/emotions/disgust.m4a" type="audio/x-m4a">
+            </audio>
+            <button class="btn-mini-play" title="Play Disgust clip" aria-label="Play Disgust clip">
+              <svg class="mini-icon-play" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <polygon points="6 4 20 12 6 20 6 4"/>
+              </svg>
+              <svg class="mini-icon-pause hidden" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <rect x="6" y="4" width="4" height="16" rx="1"/>
+                <rect x="14" y="4" width="4" height="16" rx="1"/>
+              </svg>
+            </button>
+            <div class="mini-scrubber-wrap">
+              <div class="mini-scrubber" title="Click to seek">
+                <div class="mini-progress"></div>
+              </div>
+              <div class="mini-time-row">
+                <span class="mini-curr">0:00</span>
+                <span class="mini-dur">0:25</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="rasa-card" data-rasa="bhayanaka">
+        <!-- 6. Surprise -->
+        <div class="rasa-card" data-rasa="surprise">
           <div class="rasa-header">
-            <span class="rasa-sanskrit">भयानक • Bhayanaka</span>
-            <span class="rasa-tag">Fear & Suspense</span>
+            <span class="rasa-sanskrit">Surprise</span>
+            <span class="rasa-tag">Awe & Astonishment</span>
           </div>
-          <p class="rasa-voice-desc">Breath-led whisper, rapid irregular pacing, tense constricted resonance.</p>
+          <div class="emotion-quote">
+            <p>“Wait, hold on, is that really you?! Oh my goodness, I can't believe you're standing right here! It's been almost six years since we last met!”</p>
+          </div>
+          <p class="rasa-voice-desc">Wide-eyed high-pitch inflection, sudden vocal elevation, spontaneous bursts of shock and joy.</p>
+          <div class="mini-player" data-audio-id="audioSurprise">
+            <audio id="audioSurprise" preload="metadata" class="mini-audio">
+              <source src="assets/audio/emotions/surprise.m4a" type="audio/mp4">
+              <source src="assets/audio/emotions/surprise.m4a" type="audio/x-m4a">
+            </audio>
+            <button class="btn-mini-play" title="Play Surprise clip" aria-label="Play Surprise clip">
+              <svg class="mini-icon-play" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <polygon points="6 4 20 12 6 20 6 4"/>
+              </svg>
+              <svg class="mini-icon-pause hidden" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <rect x="6" y="4" width="4" height="16" rx="1"/>
+                <rect x="14" y="4" width="4" height="16" rx="1"/>
+              </svg>
+            </button>
+            <div class="mini-scrubber-wrap">
+              <div class="mini-scrubber" title="Click to seek">
+                <div class="mini-progress"></div>
+              </div>
+              <div class="mini-time-row">
+                <span class="mini-curr">0:00</span>
+                <span class="mini-dur">0:28</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="rasa-card" data-rasa="adbhuta">
+        <!-- 7. Neutrality -->
+        <div class="rasa-card" data-rasa="neutrality">
           <div class="rasa-header">
-            <span class="rasa-sanskrit">अद्भुत • Adbhuta</span>
-            <span class="rasa-tag">Wonder & Awe</span>
+            <span class="rasa-sanskrit">Neutrality</span>
+            <span class="rasa-tag">Calm & Articulate</span>
           </div>
-          <p class="rasa-voice-desc">Wide-open vocal acoustics, elongated vowels, curiosity and marvel.</p>
-        </div>
-
-        <div class="rasa-card" data-rasa="shanta">
-          <div class="rasa-header">
-            <span class="rasa-sanskrit">शान्त • Shanta</span>
-            <span class="rasa-tag">Peace & Serenity</span>
+          <div class="emotion-quote">
+            <p>“Good morning. I usually wake up around 6:30 and spend some time exercising before getting ready for college. My classes begin at 8:00...”</p>
           </div>
-          <p class="rasa-voice-desc">Steady measured pacing, deep meditative resonance, soothing calmness.</p>
-        </div>
-
-        <div class="rasa-card" data-rasa="bibhatsa">
-          <div class="rasa-header">
-            <span class="rasa-sanskrit">बीभत्स • Bibhatsa</span>
-            <span class="rasa-tag">Aversion & Disgust</span>
+          <p class="rasa-voice-desc">Steady measured pacing, deep meditative resonance, neutral conversational tone, clean broadcast diction.</p>
+          <div class="mini-player" data-audio-id="audioNeutrality">
+            <audio id="audioNeutrality" preload="metadata" class="mini-audio">
+              <source src="assets/audio/emotions/neutrality.m4a" type="audio/mp4">
+              <source src="assets/audio/emotions/neutrality.m4a" type="audio/x-m4a">
+            </audio>
+            <button class="btn-mini-play" title="Play Neutrality clip" aria-label="Play Neutrality clip">
+              <svg class="mini-icon-play" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <polygon points="6 4 20 12 6 20 6 4"/>
+              </svg>
+              <svg class="mini-icon-pause hidden" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <rect x="6" y="4" width="4" height="16" rx="1"/>
+                <rect x="14" y="4" width="4" height="16" rx="1"/>
+              </svg>
+            </button>
+            <div class="mini-scrubber-wrap">
+              <div class="mini-scrubber" title="Click to seek">
+                <div class="mini-progress"></div>
+              </div>
+              <div class="mini-time-row">
+                <span class="mini-curr">0:00</span>
+                <span class="mini-dur">0:21</span>
+              </div>
+            </div>
           </div>
-          <p class="rasa-voice-desc">Nasal compression, visceral sneers, sharp dismissive inflections.</p>
         </div>
 
       </div>

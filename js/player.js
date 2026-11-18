@@ -86,6 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   btnPlay.addEventListener('click', () => {
     if (audio.paused) {
+      stopAllMiniPlayers();
       audio.play().then(() => {
         updatePlayState(true);
       }).catch(err => {
@@ -97,7 +98,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  audio.addEventListener('play', () => updatePlayState(true));
+  audio.addEventListener('play', () => {
+    stopAllMiniPlayers();
+    updatePlayState(true);
+  });
   audio.addEventListener('pause', () => updatePlayState(false));
   audio.addEventListener('ended', () => {
     updatePlayState(false);
@@ -350,6 +354,107 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (e.key === 'm' || e.key === 'M') {
       e.preventDefault();
       btnMute.click();
+    }
+  });
+
+  // Stop all active mini players across the spectrum
+  function stopAllMiniPlayers() {
+    document.querySelectorAll('.mini-player').forEach(player => {
+      const a = player.querySelector('.mini-audio');
+      if (a && !a.paused) {
+        a.pause();
+      }
+      player.classList.remove('is-playing');
+      const pIcon = player.querySelector('.mini-icon-play');
+      const sIcon = player.querySelector('.mini-icon-pause');
+      if (pIcon) pIcon.classList.remove('hidden');
+      if (sIcon) sIcon.classList.add('hidden');
+    });
+  }
+
+  // ---------------------------------------------------------
+  // 12. Mini Audio Players for Emotion Range Spectrum
+  // ---------------------------------------------------------
+  const miniPlayers = document.querySelectorAll('.mini-player');
+  miniPlayers.forEach(player => {
+    const miniAudio = player.querySelector('.mini-audio');
+    const btnMiniPlay = player.querySelector('.btn-mini-play');
+    const playIcon = player.querySelector('.mini-icon-play');
+    const pauseIcon = player.querySelector('.mini-icon-pause');
+    const scrubber = player.querySelector('.mini-scrubber');
+    const progress = player.querySelector('.mini-progress');
+    const currTime = player.querySelector('.mini-curr');
+    const durTime = player.querySelector('.mini-dur');
+
+    if (!miniAudio || !btnMiniPlay) return;
+
+    function updateMiniUI(playing) {
+      if (playing) {
+        player.classList.add('is-playing');
+        if (playIcon) playIcon.classList.add('hidden');
+        if (pauseIcon) pauseIcon.classList.remove('hidden');
+      } else {
+        player.classList.remove('is-playing');
+        if (playIcon) playIcon.classList.remove('hidden');
+        if (pauseIcon) pauseIcon.classList.add('hidden');
+      }
+    }
+
+    btnMiniPlay.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (miniAudio.paused) {
+        // Stop main hero audio if playing
+        if (!audio.paused) {
+          audio.pause();
+          updatePlayState(false);
+        }
+        // Stop all other mini players
+        stopAllMiniPlayers();
+        // Play this audio
+        miniAudio.play().then(() => {
+          updateMiniUI(true);
+        }).catch(err => console.warn('Mini playback blocked or error:', err));
+      } else {
+        miniAudio.pause();
+        updateMiniUI(false);
+      }
+    });
+
+    miniAudio.addEventListener('play', () => updateMiniUI(true));
+    miniAudio.addEventListener('pause', () => updateMiniUI(false));
+    miniAudio.addEventListener('ended', () => {
+      updateMiniUI(false);
+      miniAudio.currentTime = 0;
+      if (progress) progress.style.width = '0%';
+      if (currTime) currTime.textContent = '0:00';
+    });
+
+    miniAudio.addEventListener('timeupdate', () => {
+      const dur = miniAudio.duration;
+      const cur = miniAudio.currentTime;
+      if (dur && !isNaN(dur) && dur > 0) {
+        const pct = (cur / dur) * 100;
+        if (progress) progress.style.width = `${pct}%`;
+        if (currTime) currTime.textContent = formatTime(cur);
+      }
+    });
+
+    miniAudio.addEventListener('loadedmetadata', () => {
+      if (miniAudio.duration && !isNaN(miniAudio.duration)) {
+        if (durTime) durTime.textContent = formatTime(miniAudio.duration);
+      }
+    });
+
+    if (scrubber) {
+      scrubber.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const rect = scrubber.getBoundingClientRect();
+        const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+        const dur = miniAudio.duration;
+        if (dur && !isNaN(dur)) {
+          miniAudio.currentTime = ratio * dur;
+        }
+      });
     }
   });
 

@@ -36,14 +36,20 @@ An elegant, attention-grabbing, organic pastel portfolio website designed to sho
 4. **Spoken Reflection & Philosophy Drawer:**
    - Expandable accordion featuring the full transcript of your reflection on *Project Navarasa*, cultural translation, singing resonance, and why natural human warmth is critical in our digital age.
 
-4. **Organic & Pastel Aesthetic:**
-   - Soft, soothing pastel palette: Sage Green, Terracotta / Apricot Blush, Dusty Lavender, Warm Butter, and Oatmeal Linen.
-   - Ambient floating gradient blobs and fluid organic card geometry.
-   - Sophisticated editorial typography combining *Fraunces* serif and *Plus Jakarta Sans*.
+5. **Emotional Range Spectrum & Voice Acting Demos (`#navarasa`):**
+   - Individual mini audio players for all 7 English emotion demo recordings:
+     - **Happiness (`happiness.m4a`):** Triumphant celebration, breathless excitement, dream internship acceptance.
+     - **Sadness (`sadness.m4a`):** Emotional farewell, poignant pauses, tender nostalgia.
+     - **Anger (`anger.m4a`):** Piercing indignation, confronting unfair credit, high vocal intensity.
+     - **Fear (`fear.m4a`):** Tense whispered anxiety, footsteps in the dark, dying battery suspense.
+     - **Disgust (`disgust.m4a`):** Visceral nasal revulsion, spoiled food reaction, sharp dismissal.
+     - **Surprise (`surprise.m4a`):** Sudden high-pitch astonishment, meeting a friend after six years.
+     - **Neutrality (`neutrality.m4a`):** Balanced, articulate daily routine narrative and clean diction.
+   - Features quotation callouts, interactive seekable progress bars, and coordinated playback (playing one clip automatically pauses others).
 
-5. **Navarasa Vocal Palette & Services:**
-   - Interactive breakdown of the Nine Rasas (Shringara, Hasya, Karuna, Raudra, Vira, Bhayanaka, Adbhuta, Shanta, Bibhatsa) and how vocal modulation brings each to life.
-   - Studio specifications and collaboration / contact form.
+6. **Services & Studio Specifications (`#experience`):**
+   - Breakdown of dubbing, audiobooks, animation/gaming, and commercial narration services.
+   - Studio technical specifications and collaboration inquiry form.
 
 ---
 
@@ -69,8 +75,16 @@ JV/
 ├── css/
 │   └── style.css                                 # Organic pastel styling & animations
 ├── js/
-│   └── player.js                                 # Audio controls, waveform, canvas visualizer
+│   └── player.js                                 # Main player & emotion mini players
 └── assets/
     └── audio/
-        └── navarasa_audition_jithesh_reddy.m4a   # Your vocal audition recording
+        ├── navarasa_audition_jithesh_reddy.m4a   # Main spoken reflection audio
+        └── emotions/                             # 7 studio emotion demo tracks
+            ├── happiness.m4a
+            ├── sadness.m4a
+            ├── anger.m4a
+            ├── fear.m4a
+            ├── disgust.m4a
+            ├── surprise.m4a
+            └── neutrality.m4a
 ```

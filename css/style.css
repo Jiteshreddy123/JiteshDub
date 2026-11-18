@@ -1579,16 +1579,154 @@ kbd {
   opacity: 1;
 }
 
-/* Diverse pastel accents for Navarasa emotions */
-.rasa-card[data-rasa="shringara"]::before { background-color: #E2847A; }
+/* Diverse pastel accents for Navarasa and English emotions */
+.rasa-card[data-rasa="happiness"]::before,
 .rasa-card[data-rasa="hasya"]::before { background-color: #D4A338; }
-.rasa-card[data-rasa="karuna"]::before { background-color: #7B8BA1; }
+
+.rasa-card[data-rasa="sadness"]::before,
+.rasa-card[data-rasa="karuna"]::before { background-color: #6D829B; }
+
+.rasa-card[data-rasa="anger"]::before,
 .rasa-card[data-rasa="raudra"]::before { background-color: #C04A49; }
-.rasa-card[data-rasa="vira"]::before { background-color: #D97D64; }
+
+.rasa-card[data-rasa="fear"]::before,
 .rasa-card[data-rasa="bhayanaka"]::before { background-color: #7C74A6; }
-.rasa-card[data-rasa="adbhuta"]::before { background-color: #4A9B8D; }
+
+.rasa-card[data-rasa="disgust"]::before,
+.rasa-card[data-rasa="bibhatsa"]::before { background-color: #7D8A68; }
+
+.rasa-card[data-rasa="surprise"]::before,
+.rasa-card[data-rasa="adbhuta"]::before { background-color: #D96F5A; }
+
+.rasa-card[data-rasa="neutrality"]::before,
 .rasa-card[data-rasa="shanta"]::before { background-color: #5E8A6E; }
-.rasa-card[data-rasa="bibhatsa"]::before { background-color: #8C8472; }
+
+.rasa-card[data-rasa="shringara"]::before { background-color: #E2847A; }
+.rasa-card[data-rasa="vira"]::before { background-color: #D97D64; }
+
+.rasa-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Emotion dialogue sample quote */
+.emotion-quote {
+  background-color: var(--bg-card-subtle);
+  border-left: 3px solid var(--border-hover);
+  border-radius: 0 12px 12px 0;
+  padding: 0.65rem 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.rasa-card[data-rasa="happiness"] .emotion-quote { border-color: #D4A338; background: #FDF9EE; }
+.rasa-card[data-rasa="sadness"] .emotion-quote { border-color: #6D829B; background: #F2F5F8; }
+.rasa-card[data-rasa="anger"] .emotion-quote { border-color: #C04A49; background: #FAF0EE; }
+.rasa-card[data-rasa="fear"] .emotion-quote { border-color: #7C74A6; background: #F3F1F7; }
+.rasa-card[data-rasa="disgust"] .emotion-quote { border-color: #7D8A68; background: #F3F5EF; }
+.rasa-card[data-rasa="surprise"] .emotion-quote { border-color: #D96F5A; background: #FAF2EE; }
+.rasa-card[data-rasa="neutrality"] .emotion-quote { border-color: #5E8A6E; background: #EEF4F0; }
+
+.emotion-quote p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--text-main);
+  margin: 0;
+}
+
+/* Mini Audio Player Inside Each Emotion Card */
+.mini-player {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background-color: var(--bg-card-subtle);
+  border: 1px solid var(--border-soft);
+  border-radius: 9999px;
+  padding: 0.5rem 0.85rem 0.5rem 0.5rem;
+  margin-top: 1rem;
+  transition: all var(--transition-fast);
+}
+
+.mini-player.is-playing {
+  background-color: #FFF;
+  border-color: var(--border-hover);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.btn-mini-play {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: var(--sage-primary);
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.rasa-card[data-rasa="happiness"] .btn-mini-play { background-color: #C9932B; }
+.rasa-card[data-rasa="sadness"] .btn-mini-play { background-color: #5C728C; }
+.rasa-card[data-rasa="anger"] .btn-mini-play { background-color: #B53F3E; }
+.rasa-card[data-rasa="fear"] .btn-mini-play { background-color: #6E6696; }
+.rasa-card[data-rasa="disgust"] .btn-mini-play { background-color: #6C7A58; }
+.rasa-card[data-rasa="surprise"] .btn-mini-play { background-color: #C85F4B; }
+.rasa-card[data-rasa="neutrality"] .btn-mini-play { background-color: #4E7C5F; }
+
+.btn-mini-play:hover {
+  transform: scale(1.08);
+}
+
+.btn-mini-play:active {
+  transform: scale(0.95);
+}
+
+.mini-scrubber-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.mini-scrubber {
+  width: 100%;
+  height: 6px;
+  background-color: #DDD4C8;
+  border-radius: 9999px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.mini-progress {
+  width: 0%;
+  height: 100%;
+  background-color: var(--text-main);
+  border-radius: 9999px;
+  transition: width 0.1s linear;
+}
+
+.rasa-card[data-rasa="happiness"] .mini-progress { background-color: #C9932B; }
+.rasa-card[data-rasa="sadness"] .mini-progress { background-color: #5C728C; }
+.rasa-card[data-rasa="anger"] .mini-progress { background-color: #B53F3E; }
+.rasa-card[data-rasa="fear"] .mini-progress { background-color: #6E6696; }
+.rasa-card[data-rasa="disgust"] .mini-progress { background-color: #6C7A58; }
+.rasa-card[data-rasa="surprise"] .mini-progress { background-color: #C85F4B; }
+.rasa-card[data-rasa="neutrality"] .mini-progress { background-color: #4E7C5F; }
+
+.mini-time-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
 
 .rasa-header {
   display: flex;
