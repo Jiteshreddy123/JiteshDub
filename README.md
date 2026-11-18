@@ -4,24 +4,9 @@ An elegant, attention-grabbing, organic pastel portfolio website designed to sho
 
 ## 🌟 Highlights & Features
 
-1. **Current Project Section in Main Dashboard (`#dashboard`):**
-   - **Spotlight Project:** *Vocal Audition & Artistic Statement*
-   - Embedded with your studio voiceover reflection recording (`assets/audio/navarasa_audition_jithesh_reddy.m4a`).
-   - **Attention-Grabbing Headphone Instruction:** A prominent, animated banner recommending headphones or earphones for optimal vocal clarity, micro-pauses, and breath dynamics.
-
-2. **Custom Interactive Audio Suite:**
-   - **Play & Pause:** Tactile organic button with ripple animation.
-   - **Replay:** One-click restart from `0:00`.
-   - **Forward & Backward:** Skip forward (`+10s`) or rewind (`-10s`) effortlessly.
-   - **Waveform Scrubber:** 64 interactive organic waveform bars showing real-time playback progress. Click anywhere along the waveform to seek.
-   - **Real-Time Visualizer:** Organic canvas wave animation rendering fluid pastel sine harmonics that respond to playback.
-   - **Speed Control:** Toggle between `1.0×`, `1.25×`, `1.5×`, and `0.75×`.
-   - **Volume & Mute:** Custom volume slider and quick mute/unmute toggle.
-   - **Keyboard Shortcuts:**
-     - `Space` — Play / Pause
-     - `←` / `→` — Rewind / Fast Forward 10 seconds
-     - `R` — Replay from start
-     - `M` — Mute / Unmute
+1. **Current Project Showcase (`#dashboard`):**
+   - **Spotlight Banner & Redirect:** Features a prominent **"Listen to All Emotion Audios"** callout directing visitors straight to the studio audition demos.
+   - **Headphone Recommendation Banner:** Reminds listeners to use headphones or earphones for spatial clarity, breath dynamics, and subtle vocal textures.
 
 3. **Multilingual Dubbing & Accents Section (`#languages`):**
    - Showcases authentic linguistic versatility across **7 languages**:
