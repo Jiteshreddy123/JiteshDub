@@ -5,8 +5,8 @@ An elegant, attention-grabbing, organic pastel portfolio website designed to sho
 ## 🌟 Highlights & Features
 
 1. **Current Project Section in Main Dashboard (`#dashboard`):**
-   - **Spotlight Project:** *Project Navarasa — Vocal Audition & Artistic Reflection*
-   - Embedded with your exact audition audio recording (`assets/audio/navarasa_audition_jithesh_reddy.m4a`).
+   - **Spotlight Project:** *Vocal Audition & Artistic Statement*
+   - Embedded with your studio voiceover reflection recording (`assets/audio/navarasa_audition_jithesh_reddy.m4a`).
    - **Attention-Grabbing Headphone Instruction:** A prominent, animated banner recommending headphones or earphones for optimal vocal clarity, micro-pauses, and breath dynamics.
 
 2. **Custom Interactive Audio Suite:**
@@ -34,7 +34,7 @@ An elegant, attention-grabbing, organic pastel portfolio website designed to sho
      - **Kannada (ಕನ್ನಡ):** Resonant chest tones, Sandalwood action dramas, and period epics.
 
 4. **Spoken Reflection & Philosophy Drawer:**
-   - Expandable accordion featuring the full transcript of your reflection on *Project Navarasa*, cultural translation, singing resonance, and why natural human warmth is critical in our digital age.
+   - Expandable accordion featuring the full transcript of your reflection on the art of dubbing, cultural translation, singing resonance, and why natural human warmth is critical in our digital age.
 
 5. **Emotional Range Spectrum & Voice Acting Demos (`#navarasa`):**
    - Individual mini audio players for all 7 English emotion demo recordings:
